@@ -5,26 +5,23 @@ const books = [
   {
     id: 1,
     title: "Indian Railway Track",
-    summary: "A comprehensive guide to track technology, maintenance, and modernization practices on Indian Railways.",
-    cover: "/images/cover-track.jpg",
-    pdf: "/books/indian-railway-track.pdf",
-    amazon: "#"
+    summary: "A comprehensive treatise on railway track technology for Permanent Way Engineers, covering maintenance and modernization.",
+    cover: "/images/indian-railway-track.jpg",
+    pdf: "/books/indian-railway-track.pdf"
   },
   {
     id: 2,
-    title: "Railway Engineering",
-    summary: "Fundamental principles of railway engineering covering permanent way, signaling, and interlocking.",
+    title: "Railway Works Engineering",
+    summary: "A complete guide to works & bridge engineering as well as construction project management for field engineers.",
     cover: "/images/cover-engineering.jpg",
-    pdf: "/books/railway-engineering.pdf",
-    amazon: "#"
+    pdf: "/books/railway-works.pdf"
   },
   {
     id: 3,
-    title: "Track Monitoring & Safety",
-    summary: "In-depth analysis of safety standards, inspection protocols, and accident prevention mechanisms.",
+    title: "Indian Railway Safety",
+    summary: "A pictorial guide detailing various accidents, their causes, and remedial measures to prevent future incidents.",
     cover: "/images/cover-safety.jpg",
-    pdf: "/books/track-monitoring.pdf",
-    amazon: "#"
+    pdf: "/books/track-monitoring.pdf"
   }
 ];
 
@@ -82,10 +79,10 @@ function App() {
       <section className="pt-32 pb-16 md:pt-48 md:pb-32 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-            Leading Voice in Indian Railway Engineering and Safety
+            Dedicated to Indian Railway Engineering & Safety
           </h1>
           <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Decades of technical expertise dedicated to modernizing railway infrastructure and enhancing track safety standards.
+            Sharing over three decades of experience in track modernization and safety through technical literature and service.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
@@ -109,27 +106,57 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="w-full md:w-1/3">
-               {/* Placeholder for Author Image */}
-              <div className="aspect-[3/4] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                <span className="text-sm">Author Photo</span>
-              </div>
+              <img 
+                src="/images/author_dp.jpeg" 
+                alt="M. M. Agarwal" 
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
             </div>
             <div className="w-full md:w-2/3">
               <h2 className="text-3xl font-bold text-primary mb-6">About M. M. Agarwal</h2>
               <div className="prose prose-slate text-slate-600 leading-relaxed">
-                <p className="mb-4">
-                  M. M. Agarwal is a distinguished veteran of the Indian Railway Service of Engineers (IRSE), having served for over three decades in various key capacities. His career has been defined by a relentless focus on track modernization, safety protocols, and the implementation of advanced engineering practices.
-                </p>
                 <p className="mb-6">
-                  As a prolific author and technical expert, he has contributed significantly to the body of knowledge surrounding railway infrastructure. His works are widely used as reference material by engineers, students, and railway training institutes across India.
+                  M. M. Agarwal served for <strong>33 years in the Railway Service</strong>, retiring as Chief Engineer of Indian Railways. A distinguished engineer, he holds a B.Sc. and B.E. (First Division & First Position) and an MBA. His career has been defined by a focus on track modernization, safety protocols, and engineering education.
                 </p>
-                <h3 className="text-xl font-semibold text-primary mb-3">Key Achievements</h3>
+                
+                <h3 className="text-xl font-semibold text-primary mb-3">Professional Highlights</h3>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Former Chief Engineer, Indian Railways.</li>
-                  <li>Author of multiple standard textbooks on Railway Engineering.</li>
-                  <li>Pioneer in introducing modern track maintenance technologies.</li>
-                  <li>Recipient of prestigious awards for contribution to Railway Safety.</li>
+                  <li><strong>International Experience:</strong> Served 1 year in Germany studying the "Modernisation of German Railways" and 5 years in Zambia as Senior Engineer for Way & Works.</li>
+                  <li><strong>Leadership:</strong> Served as Director of the Indian Railway Housing Organisation (IRWO) for 4 years and Executive Director of the Institution of Permanent Way Engineers (IPWE) for 7 years.</li>
+                  <li><strong>Project Management:</strong> Supervised a World Bank-aided rehabilitation project of national importance valued at over $250 million.</li>
                 </ul>
+
+                <h3 className="text-xl font-semibold text-primary mb-3 mt-6">Awards & Recognition</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li><strong>National Award:</strong> Railway Minister's Medal for special work on Track Modernisation.</li>
+                  <li><strong>President's Award:</strong> 'Indira Gandhi RajBhasa Award' for the best original book written in Rajbhasha for professionals.</li>
+                  <li><strong>Lal Bahadur Shashtri Raj Bhasa Award:</strong> For best professional book in Raj Bhasa for Railway Engineers.</li>
+                  <li><strong>Vishwa Vidalaya Gaurav Ratna Award:</strong> For special services to society and the Nation.</li>
+                </ul>
+
+                <div className="mt-8 pt-6 border-t border-slate-200">
+                  <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Professional Memberships</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Fellow of Institution of Engineers (FIE)",
+                      "Fellow of Permanent Way Engineering (FIPWE)",
+                      "Fellow of Institution of Railway Transportation (FIRT)",
+                      "Fellow of Indian Council of Arbitration (FICA)",
+                      "Fellow of Institution of Valuers (FIV)"
+                    ].map((item, i) => (
+                      <span key={i} className="inline-block bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 text-sm text-slate-500 italic">
+                  <p>
+                    Author of over 60 technical articles in professional journals in India & abroad, and multiple standard textbooks including 
+                    "Indian Railway Track" and "Objective Railway Engineering".
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -145,10 +172,11 @@ function App() {
             {books.map((book) => (
               <div key={book.id} className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
                 <div className="aspect-[3/4] bg-slate-200 relative">
-                   {/* Placeholder for Book Cover */}
-                   <div className="absolute inset-0 flex items-center justify-center text-slate-400">
-                    <span className="text-sm">Cover: {book.title}</span>
-                   </div>
+                  <img 
+                    src={book.cover} 
+                    alt={book.title} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-primary mb-2">{book.title}</h3>
@@ -161,14 +189,6 @@ function App() {
                     >
                       Download PDF (Free)
                     </a>
-                    <a 
-                      href={book.amazon} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block w-full text-center text-slate-600 hover:text-accent font-medium text-sm transition-colors"
-                    >
-                      Buy Print/Kindle on Amazon &rarr;
-                    </a>
                   </div>
                 </div>
               </div>
@@ -180,15 +200,22 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-primary mb-6">Contact the Author's Estate</h2>
-          <p className="text-slate-600 mb-8">
-            For institutional orders, commercial inquiries, or rights questions regarding the publications, please email us directly.
-          </p>
+          <h2 className="text-3xl font-bold text-primary mb-8">Contact</h2>
+          
+          <div className="mb-8 space-y-2">
+            <h3 className="text-xl font-bold text-primary">PRABHA & CO.</h3>
+            <p className="text-slate-600">Address: C-157, Anand Vihar, Delhi-110092</p>
+            <div className="text-slate-600">
+              <p>Ph: 011-22153586</p>
+              <p>Ph: +91 9971806810</p>
+            </div>
+          </div>
+
           <a 
-            href="mailto:contact@railwaytrack.in" 
+            href="mailto:sanjay@aravalis.in" 
             className="text-2xl md:text-3xl font-bold text-accent hover:text-orange-700 transition-colors"
           >
-            contact@railwaytrack.in
+            sanjay@aravalis.in
           </a>
         </div>
       </section>
@@ -197,7 +224,7 @@ function App() {
       <footer className="bg-primary text-slate-400 py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-sm">
-            Copyright © {new Date().getFullYear()} The Author's Estate. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} PRABHA & CO. All Rights Reserved.
           </div>
           <div>
             <a 
